@@ -5,7 +5,12 @@ class ItemsList extends React.Component {
     render() {
         return (
             <ul className="itemsList">
-                { this.props.items.map((item, index) => <Item item={ item } key={ index } />) }
+                { this.props.items.map((item, index) => {
+                    return <Item removeItem={ this.props.removeItem } 
+                          item={ item } 
+                          key={ index } 
+                    />}) 
+                }
             </ul>
         )
     }
