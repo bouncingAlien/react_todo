@@ -10,6 +10,7 @@ class InputFrom extends React.Component {
         e.preventDefault();
         const item = {
             name: this.nameRef.current.value,
+            done: false
         }
         this.props.addItem(item);
         e.currentTarget.reset();
